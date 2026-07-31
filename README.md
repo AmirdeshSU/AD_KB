@@ -75,7 +75,7 @@ This section details every phase of the deployment process, directly mapped to t
 ### Phase 1: Server Manager Role Staging (AD DS, DNS, DHCP)
 
 #### Step 1 – Launching Server Manager Setup
-![Launch Server Manager](Screenshots/Screenshot%202026-07-15%20080150.png)
+![Launch Server Manager](Screenshots/step-01-server-manager-dashboard.png)
 
 - **Step Title:** Launch Server Manager Dashboard & Initiate Add Roles Wizard
 - **Purpose:** Invoke the central administrative management console in Windows Server to provision new server roles.
@@ -90,7 +90,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 2 – Selecting Installation Type
-![Select Installation Type](Screenshots/Screenshot%202026-07-15%20080355.png)
+![Select Installation Type](Screenshots/step-02-select-installation-type.png)
 
 - **Step Title:** Select Installation Type
 - **Purpose:** Choose between single-server role provisioning or Remote Desktop Services VDI deployment.
@@ -104,7 +104,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 3 – Target Server Selection
-![Select Destination Server](Screenshots/Screenshot%202026-07-15%20080417.png)
+![Select Destination Server](Screenshots/step-03-select-destination-server.png)
 
 - **Step Title:** Select Destination Server from Server Pool
 - **Purpose:** Target the local physical or virtual machine for role installation.
@@ -121,10 +121,10 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 4 – Selecting Roles & Management Dependencies (AD DS, DHCP, DNS)
-![Select Server Roles](Screenshots/Screenshot%202026-07-15%20080441.png)
-![Add AD DS RSAT Tools](Screenshots/Screenshot%202026-07-15%20080453.png)
-![Add DHCP RSAT Tools](Screenshots/Screenshot%202026-07-15%20080510.png)
-![Add DNS RSAT Tools](Screenshots/Screenshot%202026-07-15%20080521.png)
+![Select Server Roles](Screenshots/step-04-select-server-roles.png)
+![Add AD DS RSAT Tools](Screenshots/step-05-adds-rsat-features-popup.png)
+![Add DHCP RSAT Tools](Screenshots/step-06-dhcp-rsat-features-popup.png)
+![Add DNS RSAT Tools](Screenshots/step-07-dns-rsat-features-popup.png)
 
 - **Step Title:** Select Core Server Roles and Confirm RSAT Tool Inclusion
 - **Purpose:** Select Active Directory Domain Services, DHCP Server, and DNS Server roles, along with their mandatory management snap-ins.
@@ -139,7 +139,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 5 – Confirming Additional Features
-![Select Features](Screenshots/Screenshot%202026-07-15%20080733.png)
+![Select Features](Screenshots/step-08-select-features-gpmc.png)
 
 - **Step Title:** Select Windows Features
 - **Purpose:** Confirm supplementary OS features.
@@ -152,9 +152,9 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 6 – Reviewing Role Overview Pages
-![AD DS Information](Screenshots/Screenshot%202026-07-15%20080747.png)
-![DHCP Server Information](Screenshots/Screenshot%202026-07-15%20080807.png)
-![DNS Server Information](Screenshots/Screenshot%202026-07-15%20080825.png)
+![AD DS Information](Screenshots/step-09-adds-role-info.png)
+![DHCP Server Information](Screenshots/step-10-dhcp-role-info.png)
+![DNS Server Information](Screenshots/step-11-dns-role-info.png)
 
 - **Step Title:** Review Informational Overviews for AD DS, DHCP, and DNS
 - **Purpose:** Read vendor guidelines and architecture notices provided by Microsoft.
@@ -166,8 +166,8 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 7 – Confirming Installation Selections & Execution
-![Confirm Installation Selections](Screenshots/Screenshot%202026-07-15%20080843.png)
-![Installation Progress](Screenshots/Screenshot%202026-07-15%20080855.png)
+![Confirm Installation Selections](Screenshots/step-12-confirm-installation-selections.png)
+![Installation Progress](Screenshots/step-13-installation-progress.png)
 
 - **Step Title:** Confirm Installation Selections and Initiate Staging
 - **Purpose:** Review all selected roles, services, and features before committing binary installation to disk.
@@ -187,7 +187,7 @@ This section details every phase of the deployment process, directly mapped to t
 ### Phase 2: Pre-Promotion Computer Host Renaming
 
 #### Step 8 – Renaming Computer Hostname to Standard CSMS-ADDC
-![Rename System Hostname](Screenshots/Screenshot%202026-07-15%20090913.png)
+![Rename System Hostname](Screenshots/step-14-rename-computer-csms-addc.png)
 
 - **Step Title:** Rename Server Hostname to `CSMS-ADDC`
 - **Purpose:** Assign a standard corporate NetBIOS host name to the server before promoting it to a Domain Controller.
@@ -203,8 +203,8 @@ This section details every phase of the deployment process, directly mapped to t
 ### Phase 3: AD DS Forest Promotion & Configuration
 
 #### Step 9 – Post-Install Notification & Promotion Initiation
-![Server Manager Post-Install Dashboard](Screenshots/Screenshot%202026-07-15%20092329.png)
-![Server Manager Action Center Tasks](Screenshots/Screenshot%202026-07-15%20092348.png)
+![Server Manager Post-Install Dashboard](Screenshots/step-15-post-install-server-manager-dashboard.png)
+![Server Manager Action Center Tasks](Screenshots/step-16-action-center-promote-dc-task.png)
 
 - **Step Title:** Access Post-Deployment Notifications in Server Manager
 - **Purpose:** Initiate post-installation configuration tasks for AD DS and DHCP after system reboot.
@@ -217,7 +217,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 10 – Deployment Configuration (Forest Creation)
-![AD DS Deployment Configuration](Screenshots/Screenshot%202026-07-15%20092941.png)
+![AD DS Deployment Configuration](Screenshots/step-17-adds-deployment-config-new-forest.png)
 
 - **Step Title:** Configure Deployment Operation and Root Domain Name
 - **Purpose:** Define the Active Directory deployment topology.
@@ -232,7 +232,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 11 – Domain Controller Options & DSRM Password
-![Domain Controller Options](Screenshots/Screenshot%202026-07-15%20093401.png)
+![Domain Controller Options](Screenshots/step-18-adds-dc-options-dsrm.png)
 
 - **Step Title:** Specify Functional Levels, Server Capabilities, and DSRM Password
 - **Purpose:** Configure forest/domain capability levels, GC/DNS role options, and Directory Services Restore Mode security.
@@ -253,7 +253,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 12 – DNS Options & Delegation Notice
-![DNS Options Warning](Screenshots/Screenshot%202026-07-15%20093442.png)
+![DNS Options Warning](Screenshots/step-19-adds-dns-options-delegation-warning.png)
 
 - **Step Title:** Review DNS Delegation Warning
 - **Purpose:** Validate DNS zone delegation setup.
@@ -266,7 +266,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 13 – NetBIOS Domain Name Verification
-![Additional Options NetBIOS](Screenshots/Screenshot%202026-07-15%20093513.png)
+![Additional Options NetBIOS](Screenshots/step-20-adds-netbios-name.png)
 
 - **Step Title:** Verify NetBIOS Name Assignment
 - **Purpose:** Validate legacy down-level domain identification.
@@ -278,7 +278,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 14 – Specifying Database, Log, and SYSVOL Paths
-![AD DS Database Paths](Screenshots/Screenshot%202026-07-15%20093534.png)
+![AD DS Database Paths](Screenshots/step-21-adds-ntds-sysvol-paths.png)
 
 - **Step Title:** Configure Active Directory Directory & File Paths
 - **Purpose:** Specify file system locations for `NTDS.dit`, transaction logs, and SYSVOL.
@@ -293,7 +293,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 15 – Reviewing Options & Exporting Script
-![Review Selections Summary](Screenshots/Screenshot%202026-07-15%20093554.png)
+![Review Selections Summary](Screenshots/step-22-adds-review-options.png)
 
 - **Step Title:** Review AD DS Configuration Summary
 - **Purpose:** Validate all wizard parameters prior to execution.
@@ -310,7 +310,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 16 – Prerequisites Check & Final Promotion Execution
-![Prerequisites Check Passed](Screenshots/Screenshot%202026-07-15%20093622.png)
+![Prerequisites Check Passed](Screenshots/step-23-adds-prerequisites-check-passed.png)
 
 - **Step Title:** Perform Prerequisites Check and Execute Promotion
 - **Purpose:** Verify server readiness and perform automated promotion to Domain Controller.
@@ -325,7 +325,7 @@ This section details every phase of the deployment process, directly mapped to t
 ### Phase 4: DHCP Post-Installation Authorization & Security Delegation
 
 #### Step 17 – Post-Promotion Dashboard & Pending DHCP Tasks
-![Server Manager Post-Promotion Dashboard](Screenshots/Screenshot%202026-07-15%20100054.png)
+![Server Manager Post-Promotion Dashboard](Screenshots/step-24-post-promotion-dhcp-task-notification.png)
 
 - **Step Title:** Verify Post-Promotion Dashboard and Launch DHCP Configuration
 - **Purpose:** Complete post-installation configuration tasks required after Active Directory domain creation.
@@ -339,7 +339,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 18 – DHCP Post-Install Wizard Description
-![DHCP Post-Install Description](Screenshots/Screenshot%202026-07-15%20100115.png)
+![DHCP Post-Install Description](Screenshots/step-25-dhcp-post-install-description.png)
 
 - **Step Title:** Review DHCP Security Group and Authorization Tasks
 - **Purpose:** Overview security delegations performed by the post-install task.
@@ -353,7 +353,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 19 – Specifying Authorization Credentials
-![DHCP Authorization Credentials](Screenshots/Screenshot%202026-07-15%20100150.png)
+![DHCP Authorization Credentials](Screenshots/step-26-dhcp-authorization-credentials.png)
 
 - **Step Title:** Specify Active Directory Authorization Credentials
 - **Purpose:** Provide credentials authorized to create objects in the Configuration container of Active Directory.
@@ -366,7 +366,7 @@ This section details every phase of the deployment process, directly mapped to t
 ---
 
 #### Step 20 – Completing DHCP Authorization
-![DHCP Post-Install Summary](Screenshots/Screenshot%202026-07-15%20100218.png)
+![DHCP Post-Install Summary](Screenshots/step-27-dhcp-post-install-summary-complete.png)
 
 - **Step Title:** Confirm Post-Install Completion and Restart DHCP Service
 - **Purpose:** Validate group creation and Directory authorization status.
